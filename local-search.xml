@@ -5,8 +5,8 @@
   
   <entry>
     <title>个人博客的搭建过程</title>
-    <link href="/2021/06/10/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
-    <url>/2021/06/10/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</url>
+    <link href="/2024/11/07/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+    <url>/2024/11/07/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</url>
     
     <content type="html"><![CDATA[<h1 id="个人博客的搭建过程"><a href="#个人博客的搭建过程" class="headerlink" title="个人博客的搭建过程"></a>个人博客的搭建过程</h1><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://blog.csdn.net/yaorongke/article/details/119089190?spm=1001.2014.3001.5506">GitHub Pages + Hexo搭建个人博客网站，史上最全教程_hexo博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/Nicolecocol/article/details/136788200?spm=1001.2014.3001.5506">Node.js安装及环境配置超详细教程【Windows系统】_windows 安装nodejs-CSDN博客</a></p><p><a href="https://blog.csdn.net/csdn_life18/article/details/139767314?spm=1001.2014.3001.5506">Hexo博客的安装与本地配置-CSDN博客</a></p><p><a href="https://blog.csdn.net/weixin_43702620/article/details/118655308?spm=1001.2014.3001.5506">hexo搭建博客后图片无法显示的完美解决_hexo博客图片不显示-CSDN博客</a></p><p><a href="https://linguoguang.com/2023/01/19/Fluid_%E8%A7%A3%E5%86%B3%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">Fluid_解决阅读次数不显示问题 (linguoguang.com)</a></p><hr><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="1-hexo下载速度过慢导致报错"><a href="#1-hexo下载速度过慢导致报错" class="headerlink" title="1.hexo下载速度过慢导致报错"></a>1.hexo下载速度过慢导致报错</h3><p>解决方法：</p><p>切换为淘宝镜像站，输入npm config set registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></p><h3 id="2-hexo下载时标红报错"><a href="#2-hexo下载时标红报错" class="headerlink" title="2.hexo下载时标红报错"></a>2.hexo下载时标红报错</h3><p>经过查找资料，发现nodejs文件权限不够高</p><p>解决方法：</p><p>打开node_cache和node_global属性—安全，将权限全部打开</p><h3 id="3-搭建博客后图片无法正确显示"><a href="#3-搭建博客后图片无法正确显示" class="headerlink" title="3.搭建博客后图片无法正确显示"></a>3.搭建博客后图片无法正确显示</h3><p>检查了用于储存图片的文件夹和图片路径，_config.yml中的post_asset_folder也设置为了true，不管怎么看都没有问题。最后查找了一下资料，才发现没有下载hexo -asset-image</p><p>解决方法：</p><p>输入：npm install <a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a> –save</p><h3 id="4-浏览量无法显示"><a href="#4-浏览量无法显示" class="headerlink" title="4.浏览量无法显示"></a>4.浏览量无法显示</h3><p>发现_config.yml文件里有一个设置</p><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-comment"># REST API 服务器地址，国际版不填</span><br><br><span class="hljs-comment"># Only the Chinese mainland users need to set</span><br><br><span class="hljs-attribute">server_url</span>:<br></code></pre></td></tr></table></figure><p>把leancloud切换为了国际版，发现仍然没有用。搜索引擎搜了一下，发现需要填写server url</p><p>解决方法：</p><p>填上server url</p><p>hexo clean</p><p>hexo g -d</p><p>hexo s</p><h3 id="5-！！！"><a href="#5-！！！" class="headerlink" title="5.！！！"></a>5.！！！</h3><p>关机重启后不知道为什么，myblog根目录下所有文件都变回了初始状态，所以就重新写了一遍。但不知道为什么hexo报错说 Process failed: _config.yml</p><p>查了一下，发现大抵是重写的时候哪一行不小心删掉了某个字符，遂重新再写一遍</p>]]></content>
     
@@ -24,10 +24,10 @@
   
   <entry>
     <title>TEST</title>
-    <link href="/2021/06/10/TEST/"/>
-    <url>/2021/06/10/TEST/</url>
+    <link href="/2024/11/05/TEST/"/>
+    <url>/2024/11/05/TEST/</url>
     
-    <content type="html"><![CDATA[<h1 id="测试一下，嗯呢：）"><a href="#测试一下，嗯呢：）" class="headerlink" title="测试一下，嗯呢：）"></a>测试一下，嗯呢：）</h1><p><img src="/2021/06/10/TEST/test.png" alt="picture"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="测试一下，嗯呢：）"><a href="#测试一下，嗯呢：）" class="headerlink" title="测试一下，嗯呢：）"></a>测试一下，嗯呢：）</h1><p><img src="/2024/11/05/TEST/test.png" alt="picture"></p>]]></content>
     
     
     
